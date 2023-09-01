@@ -1,0 +1,63 @@
+@import './fonts';
+@import "../global/helpers";
+
+$max-content-width: 1240px;
+
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  //font-family: $font-base;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h1, .h1-style {
+  //font-family: $font-title;
+  //color: $title-color;
+}
+
+.hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.hide {
+  display: none;
+}
+
+section, .section {
+  padding: 0 24px;
+
+  @include media(max-content-width) {
+    padding: 0;
+  }
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
