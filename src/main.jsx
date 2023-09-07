@@ -16,9 +16,9 @@ import Layout from "./pages/Layout.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<Layout />}>
-      <Route path="/" element={<Root />} />
-      <Route path="about" element={<About />} />
-      <Route path="logements/:logementsId" element={<Logements />} />
+      <Route path="/" element={<Root />} errorElement={<Error />} />
+      <Route path="about" element={<About />} errorElement={<Error />} />
+      <Route path="logements/:logementsId" element={<Logements />} errorElement={<Error />} />
       <Route path="*" element={<Error />} />
     </Route>
   )

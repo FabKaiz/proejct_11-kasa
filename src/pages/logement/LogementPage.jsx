@@ -1,6 +1,7 @@
 import './logementPage.scss'
 
-const LogementPage = () => {
+const LogementPage = ({ logement }) => {
+  console.log(logement)
   return (
     <div>
       LogementPage

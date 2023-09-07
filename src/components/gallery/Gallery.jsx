@@ -1,31 +1,17 @@
 import { useEffect, useState } from "react";
 import GalleryCard from "../gallery-card/GalleryCard.jsx";
 import './gallery.scss'
+import useFetch from "../../hooks/useFetch.jsx";
 
 const Gallery = () => {
-  const [logements, setLogements] = useState([]);
-  const [error, setError] = useState(null);
-
-  const getLogements = async () => {
-    const response = await fetch("data/logements.json");
-
-    if (!response.ok) setError("Oops! Something went wrong : " + response.statusText);
-
-    const data = await response.json();
-    setLogements(data);
-    console.log(data)
-  }
-
-  useEffect(() => {
-    getLogements();
-  }, []);
-
+  const [url, setUrl] = useState("/data/logements.json");
+  const { data: logements, isPending, error } = useFetch(url);
 
   return (
     <section className="gallery__container">
-      {error && (
-        <p>{error}</p>
-      )}
+      {error && <p>{error}</p>}
+
+      {isPending && <p>Chargement...</p>}
 
       {logements?.length > 0 ? (
         <ul>
