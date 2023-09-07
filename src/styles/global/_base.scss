@@ -32,11 +32,11 @@ img {
     object-fit: cover;
 }
 
-p, span, a, h4, h5, h6, button, input, textarea, label, select, option, div {
+p, span, h4, h5, h6, button, input, textarea, label, select, option {
     font-size: 1.2rem;
     font-weight: $weight-medium;
 
-    @include media(sm) {
+    @include media-up(sm) {
         font-size: 1.8rem;
     }
 }
@@ -45,7 +45,7 @@ h1, .h1 {
     font-size: 2.4rem;
     font-weight: $weight-medium;
 
-    @include media(sm) {
+    @include media-up(sm) {
         font-size: 4.8rem;
     }
 }
@@ -54,7 +54,7 @@ h2, .h2 {
     font-size: 1.8rem;
     font-weight: $weight-medium;
 
-    @include media(sm) {
+    @include media-up(sm) {
         font-size: 3.6rem;
     }
 }
@@ -67,7 +67,7 @@ h3 {
 .text-404 {
     font-size: 9.6rem;
 
-    @include media(sm) {
+    @include media-up(sm) {
         font-size: 28.8rem;
     }
 }
@@ -76,7 +76,7 @@ h3 {
 nav * {
     font-size: 1.2rem;
 
-    @include media(sm) {
+    @include media-up(sm) {
         font-size: 2.4rem;
     }
 }
@@ -106,10 +106,12 @@ nav * {
 }
 
 section, .section {
-    padding: 0 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 
-    @include media(md) {
-        padding: 0 10rem;
+    @include media-up(md) {
+        margin-left: 10rem;
+        margin-right: 10rem;
     }
 }
 

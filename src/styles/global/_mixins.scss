@@ -7,7 +7,7 @@
 }
 
 // media queries
-@mixin media($breakpoint, $value : 0) {
+@mixin media-up($breakpoint, $value : 0) {
   @if $breakpoint == xs {
     @media only screen and (min-width: 430px) {
       @content;
@@ -30,6 +30,11 @@
   }
   @if $breakpoint == xl {
     @media only screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint == huge {
+    @media only screen and (min-width: 2000px) {
       @content;
     }
   }
