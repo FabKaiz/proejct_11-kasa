@@ -4,9 +4,13 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className="header section">
       <div className="header__logo">
-        <img src={Logo} alt="Brand logo" />
+        <NavLink
+          to={'/'}
+        >
+          <img src={Logo} alt="Brand logo" />
+        </NavLink>
       </div>
 
       <nav className="header__nav">

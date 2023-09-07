@@ -101,7 +101,11 @@ nav * {
 }
 
 section, .section {
-    padding: 0 100px;
+    padding: 0 2rem;
+
+    @include media(md) {
+        padding: 0 10rem;
+    }
 }
 
 .line-clamp {

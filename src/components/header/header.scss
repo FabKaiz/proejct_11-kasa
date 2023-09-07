@@ -1,0 +1,58 @@
+@import '../../styles/global/_helpers';
+
+.header {
+    @include flex(row, space-between, center);
+    padding-top: 2rem;
+
+    @include media(sm) {
+        padding-top: 4.5rem;
+    }
+
+    .header__logo {
+        max-width: 14.5rem;
+
+        @include media(sm) {
+            max-width: 21rem;
+        }
+    }
+
+    .header__nav {
+        ul {
+            @include flex(row, space-between, center);
+            width: 100%;
+
+            .header__nav-link {
+                margin-left: 2.6rem;
+                transition: color 0.3s ease-in-out;
+                text-transform: uppercase;
+                color: $primary;
+                display: block;
+                 white-space: nowrap;
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 1px;
+                    background: $primary;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    color: $primary-dark;
+
+                    &:after {
+                        width: 100%;
+                        background: $primary-dark;
+                    }
+                }
+
+                &.active {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
