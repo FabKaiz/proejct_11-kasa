@@ -9,32 +9,32 @@
 // media queries
 @mixin media($breakpoint, $value : 0) {
   @if $breakpoint == xs {
-    @media only screen and (max-width: 430px) {
+    @media only screen and (min-width: 430px) {
       @content;
     }
   }
-  @if $breakpoint == phone {
-    @media only screen and (max-width: 767px) {
+  @if $breakpoint == sm {
+    @media only screen and (min-width: 768px) {
       @content;
     }
   }
-  @if $breakpoint == tablet {
-    @media only screen and (min-width: 768px) and (max-width: 1023px) {
-      @content;
-    }
-  }
-  @if $breakpoint == desktop {
+  @if $breakpoint == md {
     @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == xl {
+    @media only screen and (min-width: 1400px) {
       @content;
     }
   }
   @if $breakpoint == custom {
     @media only screen and (min-width: $value + 0px) {
-      @content;
-    }
-  }
-  @if $breakpoint == max-content-width {
-    @media only screen and (min-width: $max-content-width) {
       @content;
     }
   }
