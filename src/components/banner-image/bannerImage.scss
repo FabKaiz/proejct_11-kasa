@@ -13,13 +13,30 @@
 
     .banner__image-wrapper {
         width: 100%;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        border-radius: 1rem;
+
+        @include media-up(sm) {
+            border-radius: 2.5rem;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background: $black;
+            opacity: 0.3;
+        }
 
         .banner__image {
-            border-radius: 1rem;
             max-height: 11.1rem;
 
             @include media-up(sm) {
-                border-radius: 2.5rem;
                 max-height: 22.3rem;
             }
         }
@@ -32,6 +49,7 @@
         line-height: 1;
         text-align: left;
         letter-spacing: 0;
+        color: $white;
 
         @include media-up(sm) {
             width: unset;
