@@ -34,6 +34,8 @@ img {
 
 p, span, a, h4, h5, h6, button, input, textarea, label, select, option, div {
     font-size: 1.2rem;
+    font-weight: $weight-medium;
+
     @include media(sm) {
         font-size: 1.8rem;
     }
@@ -41,6 +43,7 @@ p, span, a, h4, h5, h6, button, input, textarea, label, select, option, div {
 
 h1, .h1 {
     font-size: 2.4rem;
+    font-weight: $weight-medium;
 
     @include media(sm) {
         font-size: 4.8rem;
@@ -49,6 +52,7 @@ h1, .h1 {
 
 h2, .h2 {
     font-size: 1.8rem;
+    font-weight: $weight-medium;
 
     @include media(sm) {
         font-size: 3.6rem;
@@ -57,6 +61,7 @@ h2, .h2 {
 
 h3 {
     font-size: 1.8rem;
+    font-weight: $weight-medium;
 }
 
 .text-404 {

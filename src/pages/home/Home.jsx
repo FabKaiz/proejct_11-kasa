@@ -1,9 +1,10 @@
 import './home.scss'
+import BannerImage from "../../components/banner-image/BannerImage.jsx";
 
 function Home() {
   return (
     <>
-      Home
+      <BannerImage />
     </>
   )
 }

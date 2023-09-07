@@ -27,7 +27,12 @@
                 text-transform: uppercase;
                 color: $primary;
                 display: block;
-                 white-space: nowrap;
+                white-space: nowrap;
+
+                @include media(sm) {
+                    text-transform: unset;
+                    margin-left: 5.7rem;
+                }
 
                 &:after {
                     content: '';
