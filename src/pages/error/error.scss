@@ -1,0 +1,35 @@
+@import '../../styles/global/_helpers';
+
+#error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 20.9rem - 7rem);
+    color: $primary;
+    text-align: center;
+
+    @include media-up(sm) {
+        min-height: calc(100vh - 20.9rem - 11.5rem);
+        justify-content: space-around;
+    }
+
+    .error__message {
+        @include media-up(sm) {
+            font-size: 3.6rem;
+        }
+    }
+
+    .home__link {
+        text-decoration: underline;
+        font-size: 1.4rem;
+
+        @include media-up(sm) {
+            font-size: 1.8rem;
+        }
+
+        &:hover {
+            color: $primary-dark;
+        }
+    }
+}

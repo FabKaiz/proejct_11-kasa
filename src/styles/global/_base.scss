@@ -77,8 +77,10 @@ h3 {
 
 .text-404 {
     font-size: 9.6rem;
+    font-weight: $weight-bold;
 
     @include media-up(sm) {
+        line-height: 1;
         font-size: 28.8rem;
     }
 }
