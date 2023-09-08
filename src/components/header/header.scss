@@ -32,13 +32,13 @@
                 font-weight: $weight-medium;
 
                 @include media-up(sm) {
-                    font-size: 1.8rem;
+                    font-size: 2.4rem;
                 }
 
 
                 @include media-up(sm) {
                     text-transform: unset;
-                    margin-left: 5.7rem;
+                    margin-left: 6.3rem;
                 }
 
                 &:after {

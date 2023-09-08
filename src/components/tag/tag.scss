@@ -1,0 +1,12 @@
+@import '../../styles/global/_helpers';
+
+.tag {
+    background-color: $primary;
+    color: $white;
+    height: 1.8rem;
+    min-width: 8.4rem;
+    padding: 0 1rem;
+    text-align: center;
+    @include flex(row, center, center);
+    border-radius: 0.5rem;
+}

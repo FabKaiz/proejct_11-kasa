@@ -1,0 +1,70 @@
+@import '../../styles/global/_helpers';
+
+.banner__swiper {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    @include media-up(sm) {
+        border-radius: 2.5rem;
+    }
+
+    .swiper__slide {
+        display: flex;
+
+        img {
+            min-height: 255px;
+            max-height: 415px;
+            aspect-ratio: 355/255;
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3rem;
+        height: 4rem;
+        background-image: url('data:image/svg+xml,<svg width="48" height="80" viewBox="0 0 48 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.960022 72.3458L8.04002 79.4258L47.64 39.8258L8.04002 0.22583L0.960022 7.30583L33.48 39.8258L0.960022 72.3458Z" fill="white"/></svg>');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50% 50%;
+        z-index: 1;
+        cursor: pointer;
+
+        @include media-up(md) {
+            width: 9.6rem;
+            height: 12rem;
+            background-size: 70% 70%;
+        }
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+
+    .swiper-button-prev {
+        left: 0;
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .swiper-pagination {
+        display: none;
+        position: absolute;
+        bottom: 2.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        font-size: 1.8rem;
+        color: $white;
+
+        @include media-up(sm) {
+            display: block;
+        }
+
+        span {
+            font-size: 1.8rem;
+        }
+    }
+}

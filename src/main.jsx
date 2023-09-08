@@ -6,12 +6,12 @@ import {
 } from "react-router-dom";
 
 import Root from "./routes/root";
-
-import './styles/main.scss'
-import Error from "./pages/error/Error.jsx";
 import About from "./routes/About.jsx";
 import Logements from "./routes/Logements.jsx";
+import Error from "./pages/error/Error.jsx";
 import Layout from "./pages/Layout.jsx";
+
+import './styles/main.scss'
 
 const router = createBrowserRouter(
   createRoutesFromElements(

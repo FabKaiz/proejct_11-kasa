@@ -1,0 +1,52 @@
+@import '../../styles/global/_helpers';
+
+.logement__page-content__header {
+    color: $primary;
+
+    .content__header-left {
+        margin-bottom: 1.6rem;
+
+        .title {
+            line-height: 142%;
+            margin-bottom: 0.5rem;
+        }
+
+        .location {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .content__header-tags {
+            display: flex;
+
+            .tag {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .content__header-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .content__header-right__host {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .host__name {
+                max-width: 60%;
+                text-align: right;
+            }
+
+            img {
+                width: 3.2rem;
+                height: 3.2rem;
+                border-radius: 50%;
+                margin-left: 1rem;
+            }
+
+        }
+    }
+}
