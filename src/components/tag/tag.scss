@@ -9,4 +9,12 @@
     text-align: center;
     @include flex(row, center, center);
     border-radius: 0.5rem;
+
+    @include media-up(md) {
+        min-width: 11.5rem;
+        min-height: 2.5rem;
+        font-size: 1.4rem;
+        border-radius: 1rem;
+        padding: 0 1.5rem;
+    }
 }

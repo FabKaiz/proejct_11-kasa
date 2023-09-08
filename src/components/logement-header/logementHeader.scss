@@ -3,17 +3,31 @@
 .logement__page-content__header {
     color: $primary;
 
+    @include media-up(md) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
     .content__header-left {
         margin-bottom: 1.6rem;
+        @include media-up(md) {
+            max-width: 85%;
+        }
 
         .title {
-            line-height: 142%;
+            line-height: 122%;
             margin-bottom: 0.5rem;
         }
 
         .location {
             font-size: 1.4rem;
             margin-bottom: 1rem;
+
+            @include media-up(md) {
+                max-width: 85%;
+                font-size: 1.8rem;
+            }
         }
 
         .content__header-tags {
@@ -30,10 +44,30 @@
         align-items: center;
         justify-content: space-between;
 
+        @include media-up(md) {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+            flex-wrap: nowrap;
+
+            @include media-up(md) {
+                margin: 0;
+            }
+        }
+
         .content__header-right__host {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @include media-up(md) {
+                margin-bottom: 2rem;
+            }
 
             .host__name {
                 max-width: 60%;
@@ -45,6 +79,11 @@
                 height: 3.2rem;
                 border-radius: 50%;
                 margin-left: 1rem;
+
+                @include media-up(md) {
+                    width: 6.4rem;
+                    height: 6.4rem;
+                }
             }
 
         }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import GalleryCard from "../gallery-card/GalleryCard.jsx";
 import './gallery.scss'
 import useFetch from "../../hooks/useFetch.jsx";
