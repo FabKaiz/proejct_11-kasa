@@ -7,7 +7,6 @@ const useFetch = (url) => {
 
 
   useEffect(() => {
-
     const fetchData = async () => {
       setIsPending(true);
       try {

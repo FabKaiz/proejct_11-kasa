@@ -1,7 +1,6 @@
 import LogementPage from '../pages/logement/LogementPage.jsx'
 import { Navigate, useLoaderData, useNavigation } from 'react-router-dom'
 
-
 export const logementLoader = async (params) => {
   const response = await fetch('/data/logements.json')
   if (response.status === 404) return { logement: null }
