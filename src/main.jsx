@@ -7,7 +7,7 @@ import {
 
 import Root from "./routes/root";
 import About from "./routes/About.jsx";
-import Logements from "./routes/Logements.jsx";
+import { Logements,  logementLoader } from './routes/Logements.jsx'
 import Error from "./pages/error/Error.jsx";
 import Layout from "./pages/Layout.jsx";
 
@@ -18,7 +18,7 @@ const router = createBrowserRouter(
     <Route element={<Layout />}>
       <Route path="/" element={<Root />} errorElement={<Error />} />
       <Route path="about" element={<About />} errorElement={<Error />} />
-      <Route path="logements/:logementsId" element={<Logements />} errorElement={<Error />} />
+      <Route path="logements/:logementsId"  loader={({ params }) => logementLoader(params)} element={<Logements />} errorElement={<Error />} />
       <Route path="*" element={<Error />} />
     </Route>
   )
