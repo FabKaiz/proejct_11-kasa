@@ -4,7 +4,6 @@ import Accordion from "../../components/accordion/Accordion.jsx";
 import Carousel from "../../components/banner-carousel/Carousel.jsx";
 
 const LogementPage = ({ logement }) => {
-  console.log(logement)
   const { title, description, equipments, host, location, pictures, rating, tags } = logement
 
   const equipmentsList = equipments.map((equipment, i) => {

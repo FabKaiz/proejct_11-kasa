@@ -37,10 +37,8 @@ const Carousel = ({ images }) => {
           {/* Trick to preload prev/next images to have a smooth animation */}
           {images.length > 1 && (
             <>
-              <div className='slide preload' data-x={preloadBeforeIndex}
-                   style={{ backgroundImage: `url(${images[preloadBeforeIndex]})` }}></div>
-              <div className='slide preload' data-x={preloadNextIndex}
-                   style={{ backgroundImage: `url(${images[preloadNextIndex]})` }}></div>
+              <div className='slide preload' style={{ backgroundImage: `url(${images[preloadBeforeIndex]})` }} />
+              <div className='slide preload' style={{ backgroundImage: `url(${images[preloadNextIndex]})` }} />
             </>
           )}
 
