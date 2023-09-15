@@ -22,7 +22,6 @@ const router = createBrowserRouter(
         path="logements/:logementsId"
         loader={({ params }) => logementLoader(params)}
         element={<Logements />}
-
       />
       <Route path="*" element={<Error />} />
     </Route>
