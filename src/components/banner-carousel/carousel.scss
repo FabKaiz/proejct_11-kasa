@@ -1,0 +1,86 @@
+@import '../../styles/global/_helpers';
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+
+    @include media-up(sm) {
+        border-radius: 2.5rem;
+    }
+
+    .slide {
+        min-height: 255px;
+        max-height: 415px;
+        aspect-ratio: 355/255;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        border-radius: 1rem;
+        transition: all 0.5s ease-in-out;
+
+        &.preload {
+            opacity: 0;
+            z-index: -111;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .button-next,
+    .button-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3rem;
+        height: 4rem;
+        background-image: url('data:image/svg+xml,<svg width="48" height="80" viewBox="0 0 48 80" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.960022 72.3458L8.04002 79.4258L47.64 39.8258L8.04002 0.22583L0.960022 7.30583L33.48 39.8258L0.960022 72.3458Z" fill="white"/></svg>');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50% 50%;
+        z-index: 1;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        @include media-up(md) {
+            width: 9.6rem;
+            height: 12rem;
+            background-size: 70% 70%;
+        }
+
+        &:hover {
+            filter: brightness(80%) contrast(150%) saturate(150%) blur(0.5px) drop-shadow(0 0 0.5rem rgba(255, 96, 96, 0.3));
+        }
+    }
+
+    .button-next {
+        right: 0;
+    }
+
+    .button-prev {
+        left: 0;
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .pagination {
+        display: none;
+        position: absolute;
+        bottom: 2.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        font-size: 1.8rem;
+        color: $white;
+
+        @include media-up(sm) {
+            display: block;
+        }
+
+        span {
+            font-size: 1.8rem;
+        }
+    }
+}

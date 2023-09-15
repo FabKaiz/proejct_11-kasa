@@ -10,20 +10,24 @@ const Accordion = ({ title, content }) => {
   }
 
   return (
-    <div className={`accordion ${open ? 'is-open' : ''}`} aria-expanded={open}>
-      <div className="accordion__title"
-           onClick={() => toggle()}
-      >
-        <div className="h3">{title}</div>
-        <img className="accordion__logo"
-             src={arrowUp} alt='arrow icon'
-        />
-      </div>
-      <div className="accordion__content"
-           aria-hidden={open}>
-        <p>{content}</p>
-      </div>
-    </div>
+    <>
+      {title && content && (
+        <div className={`accordion ${open ? 'is-open' : ''}`} aria-expanded={open}>
+          <div className="accordion__title"
+               onClick={() => toggle()}
+          >
+            <div className="h3">{title}</div>
+            <img className="accordion__logo"
+                 src={arrowUp} alt='arrow icon'
+            />
+          </div>
+          <div className="accordion__content"
+               aria-hidden={!open}>
+            <p>{content}</p>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
