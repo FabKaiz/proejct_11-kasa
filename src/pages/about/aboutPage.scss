@@ -1,5 +1,9 @@
+@import '../../styles/global/_helpers';
+
 .about {
     .accordions_container {
-
+        @include media-up(md) {
+            padding: 0 10.8rem;
+        }
     }
 }
