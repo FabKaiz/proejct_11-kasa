@@ -13,5 +13,21 @@
         @include media-up(sm) {
             padding-top: 3rem;
         }
+
+        .logement__page-content__header {
+            margin-bottom: 1.4rem;
+        }
+
+        .accordions_container {
+            @include media-up(md) {
+                display: flex;
+                justify-content: space-between;
+
+                .accordion {
+                    width: calc(50% - 3.8rem)
+                }
+            }
+        }
+
     }
 }
