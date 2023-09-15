@@ -1,0 +1,73 @@
+@import '../../styles/global/_helpers';
+
+.accordion {
+    margin-bottom: 2rem;
+
+    &.is-open {
+        .accordion__title {
+            border-radius: 5px 5px 0 0;
+
+            @include media-up(md) {
+                border-radius: 10px 10px 0 0;
+            }
+
+            .accordion__logo {
+                transform: rotate(180deg);
+            }
+        }
+
+        .accordion__content {
+            height: 100%;
+            max-height: 9999px;
+            transition: max-height 0.3s cubic-bezier(1, 0, 1, 0), padding 0.1s ease-in;
+            padding: 2.5rem 2rem 2rem;
+            opacity: 1;
+
+            p {
+                opacity: 1;
+                transition: opacity 0.2s ease-in-out 0.2s;
+            }
+        }
+    }
+
+    .accordion__title {
+        padding: 1rem 2rem 1rem 1rem;
+        color: $white;
+        font-weight: $weight-medium;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        background: $primary;
+        cursor: pointer;
+        transition: border-radius 0.3s ease-in-out;
+
+        @include media-up(md) {
+            border-radius: 10px;
+        }
+
+        .accordion__logo {
+            width: 32px;
+            height: 32px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .accordion__content {
+        background: $grey;
+        border-radius: 0 0 5px 5px;
+        color: $primary;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0, 1, 0, 1), padding 0.22s 0.1s ease-out;
+
+        p {
+            opacity: 0;
+            transition: opacity 0.1s ease-in-out;
+        }
+
+        @include media-up(md) {
+            border-radius: 0 0 10px 10px;
+        }
+    }
+}
